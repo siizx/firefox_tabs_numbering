@@ -17,9 +17,13 @@ function updateTabTitles() {
 chrome.tabs.onCreated.addListener(updateTabTitles);
 chrome.tabs.onUpdated.addListener(function(tabId, changeInfo) {
   if (changeInfo.title) {
-    tabTitles[tabId] = changeInfo.title.replace(/^[0-9]+ /, ''); // Remove existing tab number if any
-    updateTabTitles();
+    const newTitle = changeInfo.title.replace(/^[0-9]+ /, ''); // Remove existing tab number if any
+    if (tabTitles[tabId] !== newTitle) {
+      tabTitles[tabId] = newTitle;
+      updateTabTitles();
+    }
   }
-});
-setTimeout(updateTabTitles, 100);
-updateTabTitles(); // Initial update on load
+}, {properties: ['title']}); // Only listen for title changes
+
+chrome.tabs.onMoved.addListener(updateTabTitles); // Update tab titles when tabs are moved
+chrome.tabs.on
