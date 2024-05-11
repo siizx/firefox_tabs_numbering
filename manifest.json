@@ -2,8 +2,8 @@
   "manifest_version": 2,
   "name": "Tab Numbering",
   "version": "1.0",
-  "description": "Shows tab numbers for easier switching",
-  "author": "Andrea P. (siizx@live.it)",
+  "description": "Firefox add-on that numbers each tab in order to facilitate tab-switching to users who use keyboard shortcuts.\nSafe to use, no malicious code.\nYou can also check the code out youself on my github repository: https://github.com/siizx/firefox_tabs_numbering\n",
+  "author": "Andrea P. from Italy - andreczw (siizx@live.it)",
   "permissions": ["activeTab",
     "tabs",
     "<all_urls>"
