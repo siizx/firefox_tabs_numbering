@@ -3,8 +3,11 @@
   "name": "Tab Numbering",
   "version": "1.0",
   "description": "Shows tab numbers for easier switching",
-  "author": "Andrea P (siizx@live.it)",
-  "permissions": ["tabs"],
+  "author": "Andrea P. (siizx@live.it)",
+  "permissions": ["activeTab",
+    "tabs",
+    "<all_urls>"
+  ],
   "background": {
     "scripts": ["background.js"]
   },
