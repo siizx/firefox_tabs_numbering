@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+  "name": "Tab Numbering",
+  "version": "1.0",
+  "description": "Shows tab numbers for easier switching",
+  "author": "Andrea P (siizx@live.it)",
+  "permissions": ["tabs"],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "icons": {
+    "48": "icons/icon.png"
+  }
+}
